@@ -1,0 +1,21 @@
+!pip install kaggle
+
+#upload Kaggle Credentials
+from google.colab import files
+files.upload()
+
+!mkdir -p ~/.kaggle
+
+!cp /content/kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+
+#Download Data
+
+!kaggle competitions download -c competition-name
+
+#install unzip
+!apt-get install unzip
+
+#unzip Data
+
+!unzip zipped_folder.zip -d destination_folder
