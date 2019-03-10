@@ -19,3 +19,14 @@ files.upload()
 #unzip Data
 
 !unzip zipped_folder.zip -d destination_folder
+
+###Kaggle commands###
+
+--List the currently active competitions
+!kaggle competitions list
+
+--For submission
+!kaggle competitions submit -c [COMPETTION_NAME] -f [FILE_NAME] -m [DESCRIPTION]
+
+--To view scores of a submission
+!kaggle competitions submissions -c [COMPETITION NAME]
