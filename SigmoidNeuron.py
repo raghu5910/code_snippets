@@ -3,7 +3,6 @@ class SigmoidNeuron:
   def __init__(self):
     self.w = None
     self.b = None
-    self.c = 1
 
   def sigmoid(self, z):
     return 1/(1 + np.exp(-z))
@@ -49,7 +48,7 @@ class SigmoidNeuron:
 
     m = X.shape[0]
     # FORWARD PROPAGATION (FROM X TO COST)
-    A = self.sigmoid((X@self.w) + self.b)                      # compute activation
+    A = self.sigmoid((X@(self.w)) + self.b)                      # compute activation
     cost =-(((np.log(A).T)@Y) +((np.log(1-A)).T)@(1 - Y))/m    # compute cost
 
 
