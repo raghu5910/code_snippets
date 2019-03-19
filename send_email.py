@@ -23,6 +23,6 @@ msg.add_alternative("""\
 """, subtype='html')
 
 
-with smtplib.SMTP_SSL('smtp-mail.outlook.com.', 587) as smtp:
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
     smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
     smtp.send_message(msg)
