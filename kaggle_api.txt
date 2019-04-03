@@ -30,3 +30,25 @@ files.upload()
 
 --To view scores of a submission
 !kaggle competitions submissions -c [COMPETITION NAME]
+--------------------------
+# Colab Google drive
+
+# Install the PyDrive wrapper & import libraries.
+# This only needs to be done once per notebook.
+!pip install -U -q PyDrive
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+from google.colab import auth
+from oauth2client.client import GoogleCredentials
+
+# Authenticate and create the PyDrive client.
+# This only needs to be done once per notebook.
+auth.authenticate_user()
+gauth = GoogleAuth()
+gauth.credentials = GoogleCredentials.get_application_default()
+drive = GoogleDrive(gauth)
+
+file_id = '1mrVyjlJBz0_RyDrMeqiNJUlahyNmzUXd' #https://drive.google.com/open?id=1mrVyjlJBz0_RyDrMeqiNJUlahyNmzUXd
+downloaded = drive.CreateFile({'id': file_id})
+#print('Downloaded content "{}"'.format(downloaded.GetContentString()))
+downloaded.GetContentFile('cameraman.tif')
