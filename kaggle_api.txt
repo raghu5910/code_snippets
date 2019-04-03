@@ -20,15 +20,15 @@ files.upload()
 
 !unzip zipped_folder.zip -d destination_folder
 
-###Kaggle commands###
+###Kaggle commands
 
---List the currently active competitions
+#List the currently active competitions
 !kaggle competitions list
 
---For submission
+#For submission
 !kaggle competitions submit -c [COMPETTION_NAME] -f [FILE_NAME] -m [DESCRIPTION]
 
---To view scores of a submission
+#To view scores of a submission
 !kaggle competitions submissions -c [COMPETITION NAME]
 --------------------------
 # Colab Google drive
